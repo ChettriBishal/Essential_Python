@@ -15,36 +15,41 @@ def add_movie_details(movies):
         'director': director,
         'year': year
     })
-
+def print_movie(movie):
+    print(f"Title: {movie['title']} | Director: {movie['director']} | Year: {movie['year']}")
 def list_movies(movies):
     print("MOVIES")
     for counter, movie in enumerate(movies):
-        print(f"{counter}. Title: {movie['title']} | Director: {movie['director']} | Year: {movie['year']}")
+        print(counter, end = ' ')
+        print_movie(movie)
+        
     
 
 def find_movies(movies):
     movie_key = input('Enter the title of the movie to search: ')
     all_movies = {movie['title'].lower() for movie in movies}
     if movie_key.lower() in all_movies:
-        print("Movie is in the list")
+        print("Movie Found!!!")
+        for movie in movies:
+            if movie['title'].lower() == movie_key.lower():
+                print_movie(movie)
     else:
         print("Movie is NOT in the list")
 
 
-# Create other functions for:
-#   - listing movies
-#   - finding movies
 
+# Remember first class functions ? 
+operations = {
+    'a': add_movie_details,
+    'l': list_movies,
+    'f': find_movies
+}
 
 # And another function here for the user menu
 selection = input(MENU_PROMPT)
 while selection != 'q':
-    if selection == "a":
-        add_movie_details(movies)
-    elif selection == "l":
-        list_movies(movies)
-    elif selection == "f":
-        find_movies(movies)
+    if selection in operations:
+        operations[selection](movies)
     else:
         print('Unknown command. Please try again.')
 
