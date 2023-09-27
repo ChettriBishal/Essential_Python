@@ -1,4 +1,3 @@
-# Incomplete app!
 
 MENU_PROMPT = "\nEnter 'a' to add a movie, 'l' to see your movies, 'f' to find a movie by title, or 'q' to quit: "
 movies = []
@@ -15,8 +14,10 @@ def add_movie_details(movies):
         'director': director,
         'year': year
     })
+
 def print_movie(movie):
     print(f"Title: {movie['title']} | Director: {movie['director']} | Year: {movie['year']}")
+
 def list_movies(movies):
     print("MOVIES")
     for counter, movie in enumerate(movies):
