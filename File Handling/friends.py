@@ -20,3 +20,6 @@ for person in people_list:
 print("Nearby friends are as follows")
 for friend in nearby_friends.readlines():
     print(friend)
+
+people.close() 
+nearby_friends.close() 
