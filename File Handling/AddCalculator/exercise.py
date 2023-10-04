@@ -26,7 +26,7 @@ class Calculator:
     # your `subtract()` method cannot use the + - * / calculation operators, but can use - as a negative sign operator
     @classmethod 
     def subtract(cls,num1,num2):
-        return Calculator.add(num1,-num2)
+        return cls.add(num1,-num2)
 
     # implement a class method `multiply()` that takes in num1 and num2 and return num1 * num2
     # your `multiply()` method cannot use the + - * / calculation operators, but can use - as a negative sign operator
@@ -36,7 +36,7 @@ class Calculator:
     def multiply(cls,num1,num2):
         res = 0 
         for i in range(num2):
-            res = Calculator.add(res,num1) 
+            res = cls.add(res,num1) 
         return res
     
     # implement a class method `divide()` that takes in num1 and num2 and return num1 // num2
@@ -47,8 +47,8 @@ class Calculator:
         quotient = 0 
         
         while num1 >= num2:
-            num1 = Calculator.subtract(num1, num2)
-            quotient = Calculator.add(quotient,1) 
+            num1 = cls.subtract(num1, num2)
+            quotient = cls.add(quotient,1) 
         
         
         return quotient
