@@ -1,5 +1,0 @@
-Name,Age,Location
-Alice,25,New York
-Bob,30,San Francisco
-Charlie,22,Los Angeles
-David,35,Boston
