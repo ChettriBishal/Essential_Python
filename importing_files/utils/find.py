@@ -1,4 +1,4 @@
-from .common.file_operations import save_to_file #gives error if we singly run this as main
+# from .common.file_operations import save_to_file  # gives error if we singly run this as main
 
 '''
 To only run this file separately 
@@ -9,14 +9,21 @@ but when we invoke it via another module
 
 '''
 
+
 def find_in(iterable, finder, expected):
     for i in iterable:
-        if finder(i) == expected:   
-            return i 
+        if finder(i) == expected:
+            return i
     raise NotFoundError(f"{expected} is not present in the iterable")
 
 
 class NotFoundError(Exception):
-    pass 
+    pass
 
-print(__name__)
+#Suppose I don't want to run this unless it's __main__
+if __name__ == '__main__':
+    print(find_in(['Jose', 'Rose', 'Jan', 'Snowden'], lambda x: x, "Jose"))
+    print(__name__)
+
+
+

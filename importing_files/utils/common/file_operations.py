@@ -1,3 +1,5 @@
+# from ..find import NotFoundError
+# if we give the statement above it will result in circular import
 def save_to_file(content, filename):
     with open(filename,"w") as file:
         file.write(content) 
