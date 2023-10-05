@@ -1,0 +1,3 @@
+'Permanent Record','Edward Snowden',False
+'Steve Jobs,'Walter Isaacson',True
+'The Fountain Head,'Ayn Rand',True
