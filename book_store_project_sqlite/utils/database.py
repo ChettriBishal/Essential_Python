@@ -6,10 +6,14 @@ import sqlite3
 
 from .database_connection import DatabaseConnection
 
+from typing import List, Dict, Union
+
+Book = Dict[str, Union[str, int]]  # creating our own types
+
 book_db = 'data.db'
 
 
-def create_book_table():
+def create_book_table() -> None:
     with DatabaseConnection(book_db) as connection:
         cursor = connection.cursor()
         cursor.execute('CREATE TABLE IF NOT EXISTS books (name text primary key,author text,read integer)')
@@ -35,7 +39,7 @@ def add_book(name, author):
 '''
 
 
-def add_book(name, author):
+def add_book(name: str, author: str) -> None:
     with DatabaseConnection(book_db) as connection:
         cursor = connection.cursor()
         # cursor.execute('INSERT INTO books VALUES(?,?,0)', (name, author))
@@ -45,7 +49,7 @@ def add_book(name, author):
             print(e)
 
 
-def get_all_books():
+def get_all_books() -> List[Book]:
     with DatabaseConnection(book_db) as connection:
         cursor = connection.cursor()
         cursor.execute('SELECT* FROM books;')
@@ -61,7 +65,7 @@ def get_all_books():
     return books
 
 
-def mark_book_as_read(name):
+def mark_book_as_read(name: str) -> None:
     # use update command
     if not _check_if_present(name):
         raise DoesNotExist(f'Record with book name {name} does not exist')
@@ -71,7 +75,7 @@ def mark_book_as_read(name):
         cursor.execute('UPDATE books SET read=1 WHERE name=?', (name,))
 
 
-def delete_book(name):
+def delete_book(name: str) -> None:
     if not _check_if_present(name):
         raise DoesNotExist(f'Record with book name {name} does not exist')
 
@@ -81,7 +85,7 @@ def delete_book(name):
         cursor.execute('DELETE FROM books where name=?', (name,))
 
 
-def _check_if_present(name):
+def _check_if_present(name: str) -> bool:
     with DatabaseConnection(book_db) as connection:
         cursor = connection.cursor()
         cursor.execute('SELECT * FROM books where name=?', (name,))
