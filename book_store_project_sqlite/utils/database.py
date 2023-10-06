@@ -67,20 +67,26 @@ def get_all_books() -> List[Book]:
 
 def mark_book_as_read(name: str) -> None:
     # use update command
-    if not _check_if_present(name):
-        raise DoesNotExist(f'Record with book name {name} does not exist')
-
-    with DatabaseConnection(book_db) as connection:
-        cursor = connection.cursor()
-        cursor.execute('UPDATE books SET read=1 WHERE name=?', (name,))
+    try:
+        if not _check_if_present(name):
+            raise DoesNotExist(f'Record with book name {name} does not exist')
+    except DoesNotExist as e:
+        print(f'Error: {e}')
+    else:
+        with DatabaseConnection(book_db) as connection:
+            cursor = connection.cursor()
+            cursor.execute('UPDATE books SET read=1 WHERE name=?', (name,))
 
 
 def delete_book(name: str) -> None:
-    if not _check_if_present(name):
-        raise DoesNotExist(f'Record with book name {name} does not exist')
-
-    with DatabaseConnection(book_db) as connection:
-        cursor = connection.cursor()
+    try:
+        if not _check_if_present(name):
+            raise DoesNotExist(f'Record with book name {name} does not exist')
+    except DoesNotExist as e:
+        print(f'Error: {e}')
+    else:
+        with DatabaseConnection(book_db) as connection:
+            cursor = connection.cursor()
 
         cursor.execute('DELETE FROM books where name=?', (name,))
 
