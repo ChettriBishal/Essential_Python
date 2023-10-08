@@ -1,2 +1,0 @@
-# WatchGuard
-WatchGuard Personal
