@@ -36,6 +36,15 @@ def task2(arg_od: OrderedDict):
     arg_od.move_to_end('Dan', last=False)
 
 
+# solution from the course
+def task2_course(arg_od: OrderedDict):
+    arg_od.popitem()  # remove the last element
+    arg_od.popitem(False)  # remove the first element
+    # remember to remove start and end before moving Bob and Dan, otherwise they will be removed instead
+    arg_od.move_to_end('Bob')
+    arg_od.move_to_end('Dan', False)
+
+
 def task3(name: str, club: str) -> namedtuple:
     """
     - create a `namedtuple` with type `Player`, and it will have two fields, `name` and `club`.
