@@ -1,0 +1,75 @@
+16-10-2023 09:51:52 INFO     [app.py:13] Loading books list...
+16-10-2023 09:51:52 INFO     [app.py:15] Requesting http://books.toscrape.com
+16-10-2023 09:51:55 INFO     [all_books_page.py:26] Found number of catalogue pages available: `
+            
+                Page 1 of 50
+            
+            `
+16-10-2023 09:51:55 INFO     [all_books_page.py:31] Extracted number of pages as integer: `50`.
+16-10-2023 09:51:55 INFO     [app.py:26] Going through 50 pages of books...
+16-10-2023 09:51:55 INFO     [all_books_page.py:26] Found number of catalogue pages available: `
+            
+                Page 1 of 50
+            
+            `
+16-10-2023 09:51:55 INFO     [all_books_page.py:31] Extracted number of pages as integer: `50`.
+16-10-2023 09:51:55 INFO     [app.py:31] Going through 50 pages of books...
+16-10-2023 09:51:55 INFO     [all_books_page.py:26] Found number of catalogue pages available: `
+            
+                Page 1 of 50
+            
+            `
+16-10-2023 09:51:55 INFO     [all_books_page.py:31] Extracted number of pages as integer: `50`.
+16-10-2023 09:51:55 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-1.html
+16-10-2023 09:51:56 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-2.html
+16-10-2023 09:51:57 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-3.html
+16-10-2023 09:51:59 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-4.html
+16-10-2023 09:52:00 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-5.html
+16-10-2023 09:52:01 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-6.html
+16-10-2023 09:52:02 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-7.html
+16-10-2023 09:52:04 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-8.html
+16-10-2023 09:52:05 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-9.html
+16-10-2023 09:52:06 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-10.html
+16-10-2023 09:52:07 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-11.html
+16-10-2023 09:52:08 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-12.html
+16-10-2023 09:52:10 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-13.html
+16-10-2023 09:52:11 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-14.html
+16-10-2023 09:52:12 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-15.html
+16-10-2023 09:52:13 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-16.html
+16-10-2023 09:52:14 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-17.html
+16-10-2023 09:52:15 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-18.html
+16-10-2023 09:52:17 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-19.html
+16-10-2023 09:52:18 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-20.html
+16-10-2023 09:52:19 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-21.html
+16-10-2023 09:52:20 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-22.html
+16-10-2023 09:52:22 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-23.html
+16-10-2023 09:52:23 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-24.html
+16-10-2023 09:52:24 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-25.html
+16-10-2023 09:52:25 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-26.html
+16-10-2023 09:52:27 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-27.html
+16-10-2023 09:52:28 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-28.html
+16-10-2023 09:52:29 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-29.html
+16-10-2023 09:52:30 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-30.html
+16-10-2023 09:52:31 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-31.html
+16-10-2023 09:52:33 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-32.html
+16-10-2023 09:52:34 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-33.html
+16-10-2023 09:52:35 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-34.html
+16-10-2023 09:52:36 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-35.html
+16-10-2023 09:52:37 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-36.html
+16-10-2023 09:52:38 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-37.html
+16-10-2023 09:52:40 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-38.html
+16-10-2023 09:52:41 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-39.html
+16-10-2023 09:52:42 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-40.html
+16-10-2023 09:52:43 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-41.html
+16-10-2023 09:52:44 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-42.html
+16-10-2023 09:52:46 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-43.html
+16-10-2023 09:52:47 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-44.html
+16-10-2023 09:52:48 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-45.html
+16-10-2023 09:52:49 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-46.html
+16-10-2023 09:52:51 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-47.html
+16-10-2023 09:52:52 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-48.html
+16-10-2023 09:52:53 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-49.html
+16-10-2023 09:52:54 INFO     [app.py:35] Requesting http://books.toscrape.com/catalogue/page-50.html
+16-10-2023 09:53:37 INFO     [menu.py:17] Finding best books by rating...
+16-10-2023 09:53:39 INFO     [menu.py:24] Finding cheapest books...
+16-10-2023 09:53:41 INFO     [menu.py:50] Getting the next book from the catalogue...
