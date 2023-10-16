@@ -31,6 +31,7 @@ class BookParser:
         logger.debug('Finding book name...')
         locator = BookLocators.NAME_LOCATOR
         item_name = self.parent.select_one(locator).attrs['title']
+        logger.debug(f'Found book name, `{item_name}`.')
         return item_name
 
     @property
@@ -38,6 +39,7 @@ class BookParser:
         logger.debug('Finding book page link...')
         locator = BookLocators.LINK_LOCATOR
         item_url = self.parent.select_one(locator).attrs['href']
+        logger.debug(f'Found book page link, `{item_url}`.')
         return item_url
 
     @property
@@ -50,6 +52,7 @@ class BookParser:
         pattern = r"£([\d]+\.[\d]+)"
         matcher = re.search(pattern, item_price)
         price = float(matcher.group(1))
+        logger.debug(f'Found book price, `{price}`.')
         return price
 
     @property
@@ -62,4 +65,5 @@ class BookParser:
         rating_class = next(rating_classes)
 
         rating = BookParser.RATINGS.get(rating_class)  # None if not found
+        logger.debug(f'Found book rating, `{rating}`.')
         return rating
