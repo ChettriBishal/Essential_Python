@@ -1,11 +1,12 @@
 import time
-import functools
+from functools import wraps
 
 
 def my_logger(orig_func):
     import logging
     logging.basicConfig(filename='{}.log'.format(orig_func.__name__), level=logging.INFO)
 
+    @wraps(orig_func)
     def wrapper(*args, **kwargs):
         logging.info(
             'Ran with args: {}, and kwargs: {}'.format(args, kwargs))
@@ -15,9 +16,7 @@ def my_logger(orig_func):
 
 
 def my_timer(orig_func):
-    import time
-    functools.wraps(orig_func)
-
+    @wraps(orig_func)
     def wrapper(*args, **kwargs):
         t1 = time.time()
         result = orig_func(*args, **kwargs)  # passed function executed
@@ -40,4 +39,4 @@ Stacked version is equivalent to
 display_info = my_logger(my_timer(display_info))
 """
 
-display_info('Bishal', '21')
+display_info('Snowden', '36')
