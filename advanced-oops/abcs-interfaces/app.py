@@ -1,12 +1,13 @@
 from database import Database
 from admin import Admin
+from user import User
 
 a = Admin('paco', 'perez', 2)
 b = Admin('rolf', 'smith', 1)
+c = User('snowden','pp123123')
 
-a.save()
-b.save()
+users = [a,b,c]
 
-user = Database.find(lambda x: x['username'] == 'paco')[0]
-user_obj = Admin(**user)
-print(user_obj.username)
+for user in users:
+    user.save()
+
