@@ -36,3 +36,6 @@ print(circle1.area())
 
 rectangle1 = Rectangle(45, 33)
 print(rectangle1.area())
+
+print(id(circle1.area))
+print(id(rectangle1.area))
