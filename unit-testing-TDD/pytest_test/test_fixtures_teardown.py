@@ -10,6 +10,8 @@ def setup1():
 
 @pytest.fixture()
 def setup2(request):
+    print("\nSetup 2")
+
     def teardown_a():
         print("\nTeardown A")
 
@@ -19,11 +21,12 @@ def setup2(request):
     request.addfinalizer(teardown_a)
     request.addfinalizer(teardown_b)
 
-def test1():
+
+def test1(setup1):
     print("Executing test1!")
     assert True
 
 
-def test2():
+def test2(setup2):
     print("Executing test2!")
     assert True
